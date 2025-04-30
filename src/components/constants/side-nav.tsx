@@ -2,12 +2,12 @@ import { BookOpenCheck, LayoutDashboard, Database, MessageSquare, Menu, Wallet, 
 import { type NavItem } from "@/types";
 
 export const NavItems: NavItem[] = [
-  {
-    title: "Dashboard",
-    icon: LayoutDashboard,
-    href: "/home",
-    // color: "text-sky-500",
-  },
+  // {
+  //   title: "Dashboard",
+  //   icon: LayoutDashboard,
+  //   href: "/home",
+  //   // color: "text-sky-500",
+  // },
   {
     title: "Tokens",
     icon: CreditCard,

@@ -13,7 +13,7 @@ const Hero = () => {
   const router = useRouter();
 
   const With_Typhon_Token = () => {
-    router.push("/home");
+    router.push("/tokens");
   }
 
   const Buy_Token = () => {
@@ -36,15 +36,16 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <button className="bg-[#5ca9d6] hover:bg-none border border-[#5ca9d6] px-4 py-2 rounded-lg font-[500] hover:bg-[#5ca9d6] transition duration-150" onClick={() => With_Typhon_Token()}><span className='text-white'>With Typhon Token</span></button>
-              <button className="bg-transparent hover:bg-none border border-[#5ca9d6] px-4 py-2 rounded-lg font-[500] hover:bg-[#5ca9d6] transition duration-150" onClick={() => Buy_Token()}><span className='text-white'>Buy Token</span></button>
+              
+              {/* <button className="bg-transparent hover:bg-none border border-[#5ca9d6] px-4 py-2 rounded-lg font-[500] hover:bg-[#5ca9d6] transition duration-150" onClick={() => Buy_Token()}><span className='text-white'>Buy Token</span></button> */}
             </div>
             <div className='w-full flex justify-start items-center gap-4 mt-8'>
               <div className='flex justify-center items-center gap-1'>
-                <Star className='text-yellow-500' />
-                <Star className='text-yellow-500' />
-                <Star className='text-yellow-500' />
-                <Star className='text-yellow-500' />
-                <Star className='text-yellow-500' />
+                <Star className='text-yellow-500' fill="currentColor"/>
+                <Star className='text-yellow-500' fill="currentColor"/>
+                <Star className='text-yellow-500' fill="currentColor"/>
+                <Star className='text-yellow-500' fill="currentColor"/>
+                <Star className='text-yellow-500' fill="currentColor"/>
               </div>
 
               <div className="">
@@ -70,6 +71,7 @@ const Hero = () => {
                 />
               </div>
               <span className='text-3xl font-bold'>3,000,000+</span>
+              
             </div>
 
             <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-8">
@@ -87,22 +89,13 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-8">
+            <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-2">
               <motion.div variants={fadeIn("right", "tween", 0.3, 1)}>
                 <Link href="https://x.com/typhonlabs" target='_blank'>
                   <Image width={40} height={40} src="/twitter.png" alt="" />
                 </Link>
               </motion.div>
-              <motion.div variants={fadeIn("up", "tween", 0.3, 1)}>
-                <Link href="https://discord.gg/A8UauYAm" target='_blank'>
-                  <Image width={40} height={40} src="/discord.png" alt="" />
-                </Link>
-              </motion.div>
-              <motion.div variants={fadeIn("left", "tween", 0.3, 1)}>
-                <Link href="https://github.com/laurence57l" target='_blank'>
-                  <Image width={40} height={40} src="/github.png" alt="" />
-                </Link>
-              </motion.div>
+             
             </div>
           </div>
 

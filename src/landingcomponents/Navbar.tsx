@@ -47,7 +47,7 @@ const Navbar = () => {
   const router = useRouter();
 
   const With_Typhon_Token = () => {
-    router.push("/home");
+    router.push("/tokens");
   }
 
   const navItem = [
@@ -97,7 +97,7 @@ const Navbar = () => {
               <a key={index} href={`#${item.path}`} className="text-gray-300 hover:text-[#5ca9d6] transition-colors font-[500]">{item.content}</a>
             ))
           }
-          <button className="bg-transparent hover:bg-none border border-[#5ca9d6] px-4 py-2 rounded-lg font-[500] hover:bg-[#5ca9d6] transition duration-150" onClick={() => Buy_Token()}><span className='text-white'>Buy Token</span></button>
+          {/* <button className="bg-transparent hover:bg-none border border-[#5ca9d6] px-4 py-2 rounded-lg font-[500] hover:bg-[#5ca9d6] transition duration-150" onClick={() => Buy_Token()}><span className='text-white'>Buy Token</span></button> */}
           <Button className="button-primary" onClick={() => With_Typhon_Token()}><span className='text-white'>With Typhon Token</span></Button>
         </div>
 
