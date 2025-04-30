@@ -76,7 +76,7 @@ const ChatPage: React.FC = () => {
     console.log("clicked")
 
     const client = new OpenAI({
-      apiKey: "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",
+      apiKey: "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",
       dangerouslyAllowBrowser: true
     });
 
