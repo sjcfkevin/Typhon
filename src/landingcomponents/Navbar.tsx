@@ -46,7 +46,7 @@ const Navbar = () => {
   const router = useRouter();
 
   const With_Typhon_Token = () => {
-    router.push("/token");
+    router.push("/tokens");
   }
 
   const navItem = [
