@@ -32,7 +32,7 @@ const tokenomicsData = [
 
 const TokenomicsSection = () => {
     return (
-        <section className="py-20 bg-[#161616] relative" id='tokenomics'>
+        <section className="py-20 bg-transparent relative" id='tokenomics'>
 
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
@@ -41,10 +41,10 @@ const TokenomicsSection = () => {
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
                     className="text-center mb-16">
-                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight text-white">
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">
                         <span className="smooth-lightning-text">Tokenomics</span>
                     </h1>
-                    <p className="text-gray-300 max-w-3xl mx-auto">
+                    <p className="text-gray-300 max-w-3xl mx-auto text-2xl">
                         Our token economics are designed for long-term sustainability and value creation.
                     </p>
                 </motion.div>

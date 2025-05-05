@@ -39,7 +39,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
@@ -47,13 +46,13 @@ const Navbar = () => {
   const router = useRouter();
 
   const With_Typhon_Token = () => {
-    router.push("/tokens");
+    router.push("/token");
   }
 
   const navItem = [
     {
-      content : "About",
-      path : "about"
+      content: "About",
+      path: "about"
     },
     {
       content: "Core Features",
@@ -82,23 +81,21 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-typhon-dark/90 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <a href="#" className="flex items-center">
-            <Image src="/logo.png" width={165} height={165} alt='Logo'/>
-          </a>
-        </div>
+    <nav className="fixed w-full h-[80px] flex justify-center items-center top-0 z-50 bg-transparent border-white/10">
+      <div className="max-w-4xl w-full px-4 py-3 bg-gray-50/10 flex justify-center items-center rounded-full backdrop-blur-md">
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {
             navItem.map((item, index) => (
-              <a key={index} href={`#${item.path}`} className="text-gray-300 hover:text-[#5ca9d6] transition-colors font-[500]">{item.content}</a>
+              <a key={index} href={`#${item.path}`} className="text-gray-100 hover:text-[#5ca9d6] transition-colors font-[500]">{item.content}</a>
             ))
           }
           {/* <button className="bg-transparent hover:bg-none border border-[#5ca9d6] px-4 py-2 rounded-lg font-[500] hover:bg-[#5ca9d6] transition duration-150" onClick={() => Buy_Token()}><span className='text-white'>Buy Token</span></button> */}
-          <Button className="button-primary" onClick={() => With_Typhon_Token()}><span className='text-white'>With Typhon Token</span></Button>
+          {/* <Button className="button-primary" onClick={() => With_Typhon_Token()}><span className='text-white'>With Typhon Token</span></Button> */}
+          <button className="button" onClick={() => With_Typhon_Token()}>
+            With Typhon Token
+          </button>
         </div>
 
         {/* Mobile Menu Button */}

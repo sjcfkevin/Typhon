@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import { SendHorizonal } from "lucide-react";
 import { BeatLoader } from "react-spinners";
 import imgRobot from '/public/images/robot.png';
-import OpenAI from "openai";
-import TypewriterMarkdown from "@/components/TypewriterMarkdown";
+import { useRouter } from "next/router";
 import axios from "axios";
+import TypewriterMarkdown from "@/components/TypewriterMarkdown";
+import OpenAI from "openai";
 
 interface Message {
   content: string;
@@ -24,7 +24,8 @@ interface TokenData {
   priceChange24h?: number;
   volume24h?: number;
 }
-const ChatPage: React.FC = () => {
+
+const Home: React.FC = () => {
   const router = useRouter();
   const { token } = router.query;
   const [inputMessage, setInputMessage] = useState("");
@@ -48,17 +49,17 @@ const ChatPage: React.FC = () => {
       try {
         const tokenData = (await axios.get(`https://api.dexscreener.com/token-pairs/v1/solana/${token}`)).data[0];
 
-          setTokenData({
-            address: tokenData?.baseToken?.address,
-            name: tokenData?.baseToken?.name,
-            symbol: tokenData?.baseToken?.symbol,
-            icon: tokenData?.info?.imageUrl,
-            price: tokenData?.priceUsd,
-            marketCap: tokenData?.marketCap,
-            liquidity: tokenData?.liquidity?.usd,
-            priceChange24h: tokenData?.priceChange?.h24,
-            volume24h: tokenData?.volume?.h24,
-          });
+        setTokenData({
+          address: tokenData?.baseToken?.address,
+          name: tokenData?.baseToken?.name,
+          symbol: tokenData?.baseToken?.symbol,
+          icon: tokenData?.info?.imageUrl,
+          price: tokenData?.priceUsd,
+          marketCap: tokenData?.marketCap,
+          liquidity: tokenData?.liquidity?.usd,
+          priceChange24h: tokenData?.priceChange?.h24,
+          volume24h: tokenData?.volume?.h24,
+        });
       } catch (error) {
         console.error("Error fetching token data:", error);
       }
@@ -70,13 +71,12 @@ const ChatPage: React.FC = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-
   const generateResponse = async (question: any) => {
 
     console.log("clicked")
 
     const client = new OpenAI({
-      apiKey: "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",
+      apiKey: "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",
       dangerouslyAllowBrowser: true
     });
 
@@ -117,14 +117,10 @@ const ChatPage: React.FC = () => {
     }
   };
 
-
-
-
-
   return (
-    <div className="flex flex-col h-screen bg-[#161616] text-white">
+    <div className="flex flex-col text-white bg-cover bg-center h-full w-full">
       <header className="p-4 border-b border-[#2F3548]">
-        <div className="max-w-4xl flex items-center gap-4">
+        <div className="max-w-4xl  flex items-center gap-4">
           <Image
             src={imgRobot}
             alt="Typhon Bot"
@@ -140,6 +136,7 @@ const ChatPage: React.FC = () => {
           </div>
         </div>
       </header>
+
 
       <div className="flex-1 overflow-y-auto p-4">
         {messages.length === 0 ? (
@@ -225,4 +222,4 @@ const ChatPage: React.FC = () => {
   );
 };
 
-export default ChatPage;
+export default Home;

@@ -48,17 +48,17 @@ const ChatbotPage: React.FC = () => {
       try {
         const tokenData = (await axios.get(`https://api.dexscreener.com/token-pairs/v1/solana/${token}`)).data[0];
 
-          setTokenData({
-            address: tokenData?.baseToken?.address,
-            name: tokenData?.baseToken?.name,
-            symbol: tokenData?.baseToken?.symbol,
-            icon: tokenData?.info?.imageUrl,
-            price: tokenData?.priceUsd,
-            marketCap: tokenData?.marketCap,
-            liquidity: tokenData?.liquidity?.usd,
-            priceChange24h: tokenData?.priceChange?.h24,
-            volume24h: tokenData?.volume?.h24,
-          });
+        setTokenData({
+          address: tokenData?.baseToken?.address,
+          name: tokenData?.baseToken?.name,
+          symbol: tokenData?.baseToken?.symbol,
+          icon: tokenData?.info?.imageUrl,
+          price: tokenData?.priceUsd,
+          marketCap: tokenData?.marketCap,
+          liquidity: tokenData?.liquidity?.usd,
+          priceChange24h: tokenData?.priceChange?.h24,
+          volume24h: tokenData?.volume?.h24,
+        });
       } catch (error) {
         console.error("Error fetching token data:", error);
       }
@@ -76,7 +76,7 @@ const ChatbotPage: React.FC = () => {
     console.log("clicked")
 
     const client = new OpenAI({
-      apiKey: "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",
+      apiKey: "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",
       dangerouslyAllowBrowser: true
     });
 

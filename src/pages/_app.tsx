@@ -41,27 +41,27 @@ const MyApp: AppType<{ session: Session | null }> = ({
 
   return (
     <SessionProvider session={session}>
-    <AuthProvider>
-      <ProtectedRoute>
-        <ConnectionProvider endpoint={endpoint}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <WalletProviderDynamic wallets={wallets} autoConnect>
-              <title>Typhon Token Launch</title>
-              {isHomePage ? (
-                <Component {...pageProps} />
-              ) : (
-                <Layout>
+      <AuthProvider>
+        <ProtectedRoute>
+          <ConnectionProvider endpoint={endpoint}>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <WalletProviderDynamic wallets={wallets} autoConnect>
+                <title>Typhon Token Launch</title>
+                {isHomePage ? (
                   <Component {...pageProps} />
-                  <Toaster />
-                  <ShadcnToaster />
-                </Layout>
-              )}
-            </WalletProviderDynamic>
-          </ThemeProvider>
-        </ConnectionProvider>
-      </ProtectedRoute>
-    </AuthProvider>
-  </SessionProvider>
+                ) : (
+                  <Layout>
+                    <Component {...pageProps} />
+                    <Toaster />
+                    <ShadcnToaster />
+                  </Layout>
+                )}
+              </WalletProviderDynamic>
+            </ThemeProvider>
+          </ConnectionProvider>
+        </ProtectedRoute>
+      </AuthProvider>
+    </SessionProvider>
   );
 };
 

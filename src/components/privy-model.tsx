@@ -139,7 +139,7 @@ const PrivyModal: React.FC<PrivyModalProps> = ({ onClose }) => {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.4 }}
-        className="relative bg-[#161616] p-6 rounded-xl shadow-xl w-full max-w-sm mx-4"
+        className="relative p-6 rounded-xl shadow-xl w-full max-w-sm mx-4"
       >
         <button
           onClick={onClose}

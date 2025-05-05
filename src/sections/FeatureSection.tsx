@@ -37,20 +37,20 @@ const features = [
 
 const FeaturesSection = () => {
     return (
-        <section id="features" className="py-20 bg-[#161616] relative">
+        <section id="features" className="py-20 relative">
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-4 relative z-10 py-10">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
                     className="text-center mb-16">
-                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight text-white">
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">
                         <span className="smooth-lightning-text">Core Features</span>
                     </h1>
 
-                    <p className="text-gray-300 max-w-3xl mx-auto">
+                    <p className="text-gray-300 max-w-3xl mx-auto text-2xl">
                         Typhon combines cutting-edge AI with deep blockchain expertise to provide you with unmatched crypto intelligence tools.
                     </p>
                 </motion.div>

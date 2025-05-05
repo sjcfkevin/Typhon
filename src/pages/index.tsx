@@ -1,4 +1,4 @@
-import { Footer, Navbar } from "../landingcomponents";
+import { Navbar } from "../landingcomponents";
 import {
   About,
   Hero
@@ -9,14 +9,16 @@ import TokenomicsSection from "@/sections/Tokenomics";
 import SecuritySection from "@/sections/SecurityTrust";
 import FAQSection from "@/sections/FAQ";
 import ToTop from "@/sections/ToTal";
+import { StarsCanvas } from "@/landingcomponents/starBackground";
+import SplashCursor from "@/animation/SplashCursor/SplashCursor";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#161616] text-white overflow-hidden">
+    <div className="w-full min-h-screen bg-[#030014] text-white overflow-hidden relative">
       <Navbar />
+      <Hero />
       <div className="bg-transparent overflow-hidden max-w-[85rem] mx-auto w-full flex flex-col justify-center items-center">
-        <Hero />
-        <section className="relative">
+        <section className="relative z-20">
           <About />
           <FeaturesSection />
           <HowItWorksSection />
@@ -26,7 +28,9 @@ export default function Home() {
         </section>
         <ToTop />
       </div>
-      <Footer />
+      {/* <Footer /> */}
+      <StarsCanvas />
+      <SplashCursor />
     </div>
   );
 }

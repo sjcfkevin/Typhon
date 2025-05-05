@@ -1,14 +1,23 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { TypingText } from "../landingcomponents";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { staggerContainer } from "../utils/motion";
 
 const About = () => (
   <section className="paddings relative z-10 py-20" id="about">
     <div className="gradient-02 z-0" />
+    <div className="w-full h-full absolute">
+      <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover z-10"
+        >
+          <source src="/videos/about.webm" type="video/webm" />
+        </video>
+      </div>
+    </div>
     <motion.div
       variants={staggerContainer(0.25, 0.25)}
       initial="hidden"
@@ -22,7 +31,7 @@ const About = () => (
         transition={{ duration: 1 }}
         viewport={{ once: true }}
         className="text-center mb-16">
-        <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight text-white">
+        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">
           <span className="smooth-lightning-text">About Typhon</span>
         </h1>
       </motion.div>

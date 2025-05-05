@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"_app.tsx -> @solana/wallet-adapter-react\":{\"id\":\"_app.tsx -> @solana/wallet-adapter-react\",\"files\":[]}}"

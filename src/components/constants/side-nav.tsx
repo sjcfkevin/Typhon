@@ -34,6 +34,18 @@ export const NavItems: NavItem[] = [
     isChildren: true,
     children: [
       {
+        title: "CryptoPortfolioManager",
+        icon: Wallet,
+        color: "text-red-500",
+        href: "/powered-tools/portfolio-manager",
+      },
+      {
+        title: "CryptoSecurityScanner",
+        icon: BookOpenCheck,
+        color: "text-red-500",
+        href: "/powered-tools/crypto-security-scanner",
+      },
+      {
         title: "SmartContractAuditor",
         icon: BookOpenCheck,
         color: "text-red-500",
