@@ -125,40 +125,6 @@ const Hero = () => {
               </div>
             </AnimatedContent>
 
-            {/* <div className='w-full flex justify-center items-center gap-4 mt-8'>
-              <div className='flex justify-center items-center gap-1'>
-                <Star className='text-yellow-500' fill='yellow' />
-                <Star className='text-yellow-500' fill='yellow' />
-                <Star className='text-yellow-500' fill='yellow' />
-                <Star className='text-yellow-500' fill='yellow' />
-                <Star className='text-yellow-500' fill='yellow' />
-              </div>
-
-              <div className="">
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  className="inline-block size-8 rounded-full ring-2 ring-white"
-                />
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  className="inline-block size-8 rounded-full ring-2 ring-white"
-                />
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                  className="inline-block size-8 rounded-full ring-2 ring-white"
-                />
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  className="inline-block size-8 rounded-full ring-2 ring-white"
-                />
-              </div>
-              <span className='text-3xl font-bold'>3,000,000+</span>
-            </div> */}
-
             <AnimatedContent
               distance={50}
               direction="vertical"
@@ -170,7 +136,7 @@ const Hero = () => {
               threshold={0.2}
               delay={300}
             >
-              <div className="mt-12 flex flex-wrap justify-center lg:justify-center gap-8">
+              <div className="mt-6 flex flex-wrap justify-center lg:justify-center gap-8">
                 <div className="flex items-center">
                   <LineChart className="h-6 w-6 mr-2 text-[#5ca9d6]" />
                   <span className="text-gray-300">Real-time Analysis</span>
@@ -185,6 +151,24 @@ const Hero = () => {
                 </div>
               </div>
             </AnimatedContent>
+
+            <div className='mt-6 z-50'>
+              <AnimatedContent
+                distance={50}
+                direction="vertical"
+                reverse={false}
+                config={{ tension: 35, friction: 40 }}
+                initialOpacity={0}
+                animateOpacity
+                scale={0.9}
+                threshold={0.2}
+                delay={300}
+              >
+                <a href='https://x.com/typhonlabs' target='_blank' className='cursor-pointer'>
+                  <img src="./twitter.png" alt="" className='w-12 h-12' />
+                </a>
+              </AnimatedContent>
+            </div>
           </div>
         </div>
       </div>
